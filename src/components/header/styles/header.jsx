@@ -1,0 +1,70 @@
+import styled from "styled-components/macro";
+import {  Link as ReactRouterLink } from 'react-router-dom';
+
+export const Container = styled.div`
+    display: flex;
+    margin: 0 56px;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+    postion: relative;
+    z-index: 2;
+
+    a{
+        diplay: flex;
+    }
+
+    @media (max-width: 1000px){
+        margin: 0 30px;
+    }
+`;
+
+export const Background = styled.div`
+ position: relative;
+ display: flex;
+ flex-direction: column;
+ background: url(${({src}) => 
+ src ? `../images/misc/${src}.jpg` : '../images/misc/home-bg.jpg' })
+    top left / cover no-repeat;
+`;
+
+export const Logo = styled.img`
+    height: 32px;
+    width: 108px;
+    margin-right: 40px;
+    @media (min-width: 1449px){
+        height: 45px;
+        width: 167px;
+    }
+`;
+
+export const ButtonLink = styled(ReactRouterLink)`
+    display: block;
+    background-color: #e50914;
+    width: 84px;
+    height: fit-content;
+    color: white;
+    border: 0;
+    font-size: 15px;
+    border-radius: 3px;
+    padding: 8px 17px;
+    cursor: pointer;
+    text-decoration: none;
+    box-sizing: border-box;
+
+    &:hover{
+        background-color: #f40612;
+    }
+`;
+
+
+export const Gradient = styled.div`
+background: rgba(0,0,0,.4);
+background-image: linear-gradient(0deg,rgba(0,0,0,.8) 0,transparent 60%,rgba(0,0,0,.8));
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index:1;
+`;
